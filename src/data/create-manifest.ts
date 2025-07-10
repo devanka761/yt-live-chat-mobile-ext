@@ -20,7 +20,7 @@ function createManifest(): void {
     version: "0.0.1",
     content_scripts: [
       {
-        matches: ["http://studio.youtube.com/live_chat*"],
+        matches: ["https://studio.youtube.com/live_chat*"],
         js: ["content.js"]
       }
     ]
