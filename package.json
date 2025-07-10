@@ -1,0 +1,31 @@
+{
+  "name": "yt-live-chat-mobile-extension",
+  "version": "1.0.0",
+  "description": "Buat baca chat live stream di hape biar ga perlu bolak-balik tab di laptop kentang ini",
+  "main": "./src/content.ts",
+  "scripts": {
+    "lint": "eslint",
+    "build": "echo compiling.. && rm -rf dist && tsc && tsx ./src/data/create-manifest.ts && echo compiled!"
+  },
+  "keywords": [],
+  "author": "Devanka761 <contact@devanka.id> (https://devanka.id/)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devanka761/yt-live-chat-mobile-ext.git"
+  },
+  "bugs": {
+    "url": "https://github.com/devanka761/yt-live-chat-mobile-ext/issues"
+  },
+  "homepage": "https://github.com/devanka761/yt-live-chat-mobile-ext#readme",
+  "devDependencies": {
+    "@eslint/js": "^9.30.1",
+    "@types/node": "^24.0.12",
+    "eslint": "^9.30.1",
+    "globals": "^16.3.0",
+    "prettier": "^3.6.2",
+    "tsx": "^4.20.3",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.36.0"
+  }
+}
