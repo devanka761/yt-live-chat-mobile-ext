@@ -1,3 +1,5 @@
+import "../scss/content.scss"
+
 function rewriteCharset(meta: HTMLMetaElement): void {
   meta.setAttribute("charset", "UTF-8")
 }
@@ -53,18 +55,10 @@ function setViewport(): void {
   rewriteViewport(viewportExists)
 }
 
-function setStyle(): void {
-  const head = document.head
-  const style = document.createElement("style")
-  style.innerHTML = `yt-live-chat-renderer *{font-size:18px !important;line-height:18px !important}yt-live-chat-text-message-renderer #content,yt-live-chat-legacy-paid-message-renderer #content{overflow:initial !important}yt-live-chat-item-list-renderer #items{overflow:hidden !important}yt-live-chat-item-list-renderer #item-scroller{overflow:hidden !important}yt-live-chat-header-renderer,yt-live-chat-message-input-renderer{display:none !important}yt-live-chat-text-message-renderer #timestamp{font-size:16px !important;line-height:16px !important}yt-live-chat-text-message-renderer #author-name[type=owner],yt-live-chat-text-message-renderer #author-name.owner,yt-live-chat-text-message-renderer yt-live-chat-author-badge-renderer[type=owner]{color:#804000 !important}yt-live-chat-text-message-renderer #author-name[type=moderator],yt-live-chat-text-message-renderer #author-name.moderator,yt-live-chat-text-message-renderer yt-live-chat-author-badge-renderer[type=moderator]{color:#400080 !important}yt-live-chat-text-message-renderer #author-name[type=member],yt-live-chat-text-message-renderer #author-name.member,yt-live-chat-text-message-renderer yt-live-chat-author-badge-renderer[type=member]{color:#095531 !important}yt-live-chat-text-message-renderer #author-name{font-size:20px !important;line-height:20px !important}yt-live-chat-text-message-renderer #message,yt-live-chat-text-message-renderer #message *{font-size:18px !important;line-height:18px !important}yt-live-chat-paid-message-renderer #author-name,yt-live-chat-paid-message-renderer #author-name *,yt-live-chat-legacy-paid-message-renderer #event-text,yt-live-chat-legacy-paid-message-renderer #event-text *{font-size:20px !important;line-height:20px !important}yt-live-chat-paid-message-renderer #purchase-amount,yt-live-chat-paid-message-renderer #purchase-amount *,yt-live-chat-legacy-paid-message-renderer #detail-text,yt-live-chat-legacy-paid-message-renderer #detail-text *{font-size:18px !important;line-height:18px !important}yt-live-chat-paid-message-renderer #content,yt-live-chat-paid-message-renderer #content *{font-size:18px !important;line-height:18px !important}yt-live-chat-paid-message-renderer{margin:4px 0 !important}yt-live-chat-legacy-paid-message-renderer{background-color:#095531 !important;margin:4px 0 !important}yt-live-chat-text-message-renderer a,yt-live-chat-legacy-paid-message-renderer a{text-decoration:none !important}`
-  head.append(style)
-}
-
 function startContent(): void {
   setViewport()
   setHttpEquivContent()
   setCharset()
-  setStyle()
 }
 
 startContent()
