@@ -1,8 +1,28 @@
 @use "./variables" as v;
+@import url("https://fonts.googleapis.com/css?family=Changa One");
+@import url("https://fonts.googleapis.com/css?family=Imprima");
+
+* {
+  border: none !important;
+  // outline: none !important;
+  // border-bottom: none !important;
+}
 
 body {
   overflow: hidden;
+  background-color: rgba(0, 0, 0, 0);
+  margin-top: -5px !important;
 }
+
+yt-live-chat-renderer {
+  background-color: transparent !important;
+}
+
+yt-live-chat-text-message-renderer,
+yt-live-chat-text-message-renderer[is-highlighted] {
+  background-color: transparent !important;
+}
+
 yt-live-chat-text-message-renderer[author-type="owner"],
 yt-live-chat-text-message-renderer[author-type="owner"][is-highlighted] {
   background-color: transparent !important;
@@ -21,9 +41,11 @@ yt-live-chat-text-message-renderer[author-type="member"][is-highlighted] {
 yt-live-chat-author-chip #author-name {
   background-color: transparent !important;
 }
+
 yt-live-chat-renderer * {
   text-shadow: v.$textshadow;
-  font-size: 14px !important;
+  font-family: "Imprima";
+  font-size: 18px !important;
   line-height: normal !important;
 }
 
@@ -47,24 +69,25 @@ yt-live-chat-message-input-renderer {
 
 yt-live-chat-text-message-renderer,
 yt-live-chat-legacy-paid-message-renderer {
-  padding-left: 20px !important;
-  padding-right: 20px !important;
-  &:last-child {
-    margin-bottom: 100px !important;
-  }
-  &:last-of-type {
-    margin-bottom: 100px !important;
-  }
+  padding-left: 4px !important;
+  padding-right: 4px !important;
+  // &:last-child {
+  //   margin-bottom: 10px !important;
+  // }
+  // &:last-of-type {
+  //   margin-bottom: 10px !important;
+  // }
 }
 
 yt-live-chat-paid-message-renderer #header {
-  padding-left: 20px !important;
-  padding-right: 20px !important;
+  padding-left: 4px !important;
+  padding-right: 4px !important;
 }
 
 yt-live-chat-text-message-renderer #author-photo,
 yt-live-chat-paid-message-renderer #author-photo,
 yt-live-chat-legacy-paid-message-renderer #author-photo {
+  display: none !important;
   width: 24px !important;
   height: 24px !important;
   border-radius: 24px !important;
@@ -72,14 +95,15 @@ yt-live-chat-legacy-paid-message-renderer #author-photo {
 }
 
 yt-live-chat-text-message-renderer #author-badges {
+  display: none !important;
   vertical-align: text-top !important;
 }
 
 yt-live-chat-text-message-renderer #timestamp {
-  display: inline !important;
-  color: #a395eb !important;
-  font-size: 12px !important;
-  line-height: 12px !important;
+  color: #999999 !important;
+  font-family: "Imprima";
+  font-size: 16px !important;
+  line-height: 16px !important;
 }
 
 yt-live-chat-text-message-renderer #author-name[type="owner"],
@@ -102,15 +126,16 @@ yt-live-chat-text-message-renderer yt-live-chat-author-badge-renderer[type="memb
 
 yt-live-chat-text-message-renderer #author-name {
   color: #a395eb !important;
-  font-weight: 800 !important;
-  font-size: 16px !important;
-  line-height: 16px !important;
+  font-family: "Changa One";
+  font-size: 20px !important;
+  line-height: 20px !important;
 }
 
 yt-live-chat-text-message-renderer #message,
 yt-live-chat-text-message-renderer #message * {
   color: #f0f2f3 !important;
-  font-size: 14px !important;
+  font-family: "Imprima";
+  font-size: 18px !important;
   line-height: normal !important;
   letter-spacing: normal !important;
 }
@@ -120,9 +145,9 @@ yt-live-chat-paid-message-renderer #author-name *,
 yt-live-chat-legacy-paid-message-renderer #event-text,
 yt-live-chat-legacy-paid-message-renderer #event-text * {
   color: #f0f2f3 !important;
-  font-weight: 800 !important;
-  font-size: 16px !important;
-  line-height: 16px !important;
+  font-family: "Changa One";
+  font-size: 20px !important;
+  line-height: 20px !important;
 }
 
 yt-live-chat-paid-message-renderer #purchase-amount,
@@ -130,15 +155,17 @@ yt-live-chat-paid-message-renderer #purchase-amount *,
 yt-live-chat-legacy-paid-message-renderer #detail-text,
 yt-live-chat-legacy-paid-message-renderer #detail-text * {
   color: #f0f2f3 !important;
-  font-size: 14px !important;
-  line-height: 14px !important;
+  font-family: "Imprima";
+  font-size: 18px !important;
+  line-height: 18px !important;
 }
 
 yt-live-chat-paid-message-renderer #content,
 yt-live-chat-paid-message-renderer #content * {
   color: #f0f2f3 !important;
-  font-size: 14px !important;
-  line-height: 14px !important;
+  font-family: "Imprima";
+  font-size: 18px !important;
+  line-height: 18px !important;
 }
 
 yt-live-chat-moderation-message-renderer {
@@ -168,6 +195,7 @@ yt-live-chat-ticker-renderer {
   background-color: transparent !important;
   box-shadow: none !important;
 }
+
 yt-live-chat-ticker-renderer {
   display: none !important;
 }
@@ -177,6 +205,7 @@ yt-live-chat-ticker-paid-message-item-renderer *,
 yt-live-chat-ticker-sponsor-item-renderer,
 yt-live-chat-ticker-sponsor-item-renderer * {
   color: #f0f2f3 !important;
+  font-family: "Imprima";
 }
 
 yt-live-chat-mode-change-message-renderer,
@@ -193,11 +222,13 @@ yt-live-chat-action-panel-renderer,
 yt-live-chat-renderer #action-panel {
   display: none !important;
 }
+
 yt-reaction-control-panel-overlay,
 yt-reaction-control-panel-overlay-view-model,
 yt-reaction-control-panel-view-model {
   display: none !important;
 }
+
 yt-live-chat-viewer-engagement-message-renderer {
   display: none !important;
 }

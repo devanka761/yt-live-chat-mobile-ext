@@ -4,6 +4,7 @@
   "description": "Buat baca chat live stream di hape biar ga perlu bolak-balik tab di laptop kentang ini",
   "main": "./src/content.ts",
   "scripts": {
+    "sass": "sass ./src/scss/fak.scss ./src/css/fak.css --no-source-map --style compressed",
     "dev": "webpack --config webpack.dev.cjs",
     "lint": "eslint",
     "build": "echo compiling.. && rm -rf dist && webpack --config webpack.prod.cjs && tsx ./src/data/create-manifest.ts && echo compiled!"
