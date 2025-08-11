@@ -1,13 +1,13 @@
 {
   "name": "yt-live-chat-mobile-extension",
-  "version": "1.0.0",
+  "version": "1.0.1-dev.20250811.1",
   "description": "Buat baca chat live stream di hape biar ga perlu bolak-balik tab di laptop kentang ini",
   "main": "./src/content.ts",
   "scripts": {
-    "sass": "sass ./src/scss/fak.scss ./src/css/fak.css --no-source-map --style compressed",
+    "sass": "sass ./src/scss/obs.scss ./dist/obs.css --no-source-map --style compressed",
     "dev": "webpack --config webpack.dev.cjs",
     "lint": "eslint",
-    "build": "echo compiling.. && rm -rf dist && webpack --config webpack.prod.cjs && tsx ./src/data/create-manifest.ts && echo compiled!"
+    "build": "echo Bundling Extension && rm -rf dist && webpack --config webpack.prod.cjs && tsx ./src/data/create-manifest.ts && echo Extension is Ready! && echo Compiling OBS Custom CSS && sass ./src/scss/obs.scss ./dist/obs.css --no-source-map --style compressed && echo OBS Custom CSS Compield! && echo Done!"
   },
   "keywords": [],
   "author": "Devanka761 <contact@devanka.id> (https://devanka.id/)",
